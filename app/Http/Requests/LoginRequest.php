@@ -3,8 +3,8 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Validation\Rule;
-class RegisterRequest extends FormRequest
+
+class LoginRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,12 +23,8 @@ class RegisterRequest extends FormRequest
     {
         return [
             //
-            'firstname' => ['required', 'string','min:3'],
-            'lastname'=>['required','string','min:3'],
-            'email'=>['required','email'],
-            'password'=> ['required','min:5'],
-            'password_confirmation' => ['required','confirmed'],
+            "email"=> ["required","email"],
+            'password'=>["required","password"],
         ];
     }
-   
 }

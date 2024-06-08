@@ -20,15 +20,17 @@
         </div>
         <div class="flex border-left flex items-center">
           <ul class="px-1 flex content-evenly items-center">
-            <li class="px-5"><a>Se connecter</a></li>
+            <li class="px-5"><a href="{{ route('login') }}">Se connecter</a></li>
             <li>
               <li class="btn bg-red-500 text-white font-semibold py-2 px-4 rounded-lg">
-                s'inscrire
+                <a href="{{route('register')}}">s'inscrire</a>
+
               </li>
             </li>
           </ul>
         </div>
     </div>
       @yield('welcome')
+      @yield('content')
 </body>
 </html>
