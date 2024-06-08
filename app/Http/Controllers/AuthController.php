@@ -10,7 +10,7 @@ class AuthController extends Controller
 {
 
     public function register() {
-        return view('')
+        return view('auth.register');
     }
     public function Doregister(RegisterRequest $request){
         $client = new Client();
